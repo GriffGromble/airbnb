@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Mapbox Example</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    </style>
+
+
+<style>
+	body {
+		margin: 0;
+		padding: 0;
+	}
+
+	#map {
+		width: 100%;
+		height: 400px;
+	}
+</style>
+
+<div id='map'></div>
+
+</head>
+
+
+<body>
+
+
+
+
+	class="navbar navbar-expand-lg bg-body-tertiary">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="/">
+			Company
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/">
+						Home
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="users.html">Users</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="signup.html">Signup</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="login.html">Login</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="about-us.html">About us</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="contact-us.html">Contact us</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Dropdown
+					</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Action</a></li>
+						<li><a class="dropdown-item" href="#">Another action</a></li>
+						<li>
+							<hr class="dropdown-divider">
+						</li>
+						<li><a class="dropdown-item" href="#">Something else here</a></li>
+					</ul>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link disabled" aria-disabled="true">Disabled</a>
+				</li>
+			</ul>
+			<form class="d-flex" role="search">
+				<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+				<button class="btn btn-warning" type="submit">Search</button>
+			</form>
+		</div>
+	</div>
+</nav>
+
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic2FudGlhZ29kb25vc28iLCJhIjoiY2x2MHF0dG82MWtjbTJqbndlMHl2NTk4ZiJ9.lMnVOfvOkeCkGiQ7PJZnyg';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [12.157145708559906, 55.48788457079546],
+        zoom: 12
+    });
+
+    new mapboxgl.Marker()
+        .setLngLat([12.157145708559906, 55.48788457079546])
+        .addTo(map);
+
+
+</script>
+ 
+</body>
+</html>
